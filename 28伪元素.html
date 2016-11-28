@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>28伪元素</title>
+		
+		<style type="text/css">
+			
+			/*为p元素的首字母设置字体大小及颜色*/
+			/*p:first-letter{
+				color: red;
+				font-size: 30px;
+			}*/
+			
+			/*为p元素首行设置背景颜色*/
+			/*p:first-line{
+				background: yellow;
+			}*/
+			
+			
+			/**
+			 * :before表示元素最前边的部分
+			 * 一般:before都需要结合content这个样式一起使用
+			 * 通过content可以向:before或:after的位置添加一些内容
+			 */
+			p:before{
+				content: "我会出现在整个段落的最前面";
+				color: brown;
+			}			
+			p:after{
+				content: "我会出现在整个段落的最后面";
+				color: orange;
+			}
+			
+		</style>
+		
+	</head>
+
+	<body>
+		<p>这少年便是闰土。我认识他时，也不过十多岁，离现在将有三十年了； 那时我的父亲还在世，家景也好，我正是一个少爷。那一年，我家是一件大祭祀的值年。 这祭祀，说是三十多年才能轮到一回，所以很郑重。正月里供像，供品很多，祭器很讲究，拜的人也很多，祭器也很要防偷去。 我家只有一个忙月（我们这里给人做工的分三种：整年给一定人家做工的叫长年；按日给人做工的叫短工；自己也种地，只在过年过节以及收租时候来给一定的人家做工的称忙月）， 忙不过来，他便对父亲说，可以叫他的儿子闰土来管祭器的。
+		</p>
+	</body>
+
+</html>

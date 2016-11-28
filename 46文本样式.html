@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>46文本样式</title>
+
+		<style type="text/css">
+			.p1 {
+				/**
+				 * text-transform可以用来设置文本的大小写
+				 * 	可选值：
+				 * 		none 默认值，该怎么显示就怎么显示，不做任何处理
+				 * 		capitalize 单词的首字母大写，通过空格来识别单词
+				 * 		uppercase 所有字母都大写
+				 * 		lowercase 所有字母都小写
+				 */
+				text-transform: lowercase;
+			}
+			
+			.p2 {
+				/**
+				 * text-decoration可以用来设置文本的修饰
+				 * 		可选值：
+				 * 			none：默认值，不添加任何修饰
+				 * 			underline：为文本设置下划线
+				 * 			overline：为文本添加上划线
+				 * 			line-through：为文本添加删除线
+				 */
+				text-decoration: line-through;
+			}
+			
+			a {
+				/**
+				 * 超链接会默认添加下划线，也就是超链接text-decoration默认值是underline
+				 * 	如果要去除超链接下面默认的下划线把超链接的text-decoration设置为none
+				 */
+				text-decoration: none;
+			}
+			
+			.p3 {
+				/**
+				 * letter-spacing可以设置字符间距（默认为0）
+				 */
+				/*letter-spacing: 10px;*/
+				
+				/**
+				 * word-spacing用来设置单词之间的距离（中文无效）
+				 * 	实际上就是设置词于词之间空格的大小
+				 */
+				word-spacing: 10px;
+			}
+			
+			.p4{
+				/**
+				 * text-align用来设置文本的对其方式
+				 * 		可选值：
+				 * 			left 默认值，文本靠左对齐
+				 * 			right ，文本靠右对齐
+				 * 			center ，文本居中对齐
+				 * 			justify ，两端对齐
+				 * 					- 通过调整文本之间的空格的大小，来达到一个两端对的目的
+				 */
+				text-align: justify;
+			}
+			
+			.p5 {
+				font-size: 20px;
+				/**
+				 * text-indent设置首行缩进
+				 * 	当给它指定一个正值，会自动向右侧缩进指定的像素
+				 * 	如果为它指定一个负值，则会向左移动指定的像素
+				 * 		通过这种方式可以将一些不想显示的文字隐藏起来
+				 * 	这个值一般都会使用em作为单位
+				 */
+				text-indent: -2em;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<h1 class="p4">这是一个h1</h1>
+
+		<p class="p1">
+			These astonishing numbers have led 90% of Fortune 500 companies to rely on TeamViewer as their choice to bring colleagues together across all platforms and all devices. From the largest businesses who view TeamViewer as “a game changer” to individuals who post their love and appreciation for our products across various social channels almost as quickly as people download it, we are constantly inspired by our users’ imaginations for finding ways to uniquely take advantage of our technology.
+		</p>
+
+		<br /><br />
+	
+		<p class="p2">
+			These astonishing numbers have led 90% of Fortune 500 companies to rely on TeamViewer as their choice to bring colleagues together across all platforms and all devices. From the largest businesses who view TeamViewer as “a game changer” to individuals who post their love and appreciation for our products across various social channels almost as quickly as people download it, we are constantly inspired by our users’ imaginations for finding ways to uniquely take advantage of our technology.
+		</p>
+
+		<br /><br />
+
+		<a href="#">这是一个超链接</a>
+
+		<br /><br />
+
+		<p class="p3">
+			These astonishing numbers have led 90% of Fortune 500 companies to rely on TeamViewer as their choice to bring colleagues together across all platforms and all devices. From the largest businesses who view TeamViewer as “a game changer” to individuals who post their love and appreciation for our products across various social channels almost as quickly as people download it, we are constantly inspired by our users’ imaginations for finding ways to uniquely take advantage of our technology.
+		</p>
+
+		<p class="p3">
+			这少年便是闰土。我认识他时，也不过十多岁，离现在将有三十年了； 那时我的父亲还在世，家景也好，我正是一个少爷。那一年，我家是一件大祭祀的值年。 这祭祀，说是三十多年才能轮到一回，所以很郑重。正月里供像，供品很多，祭器很讲究，拜的人也很多，祭器也很要防偷去。 我家只有一个忙月（我们这里给人做工的分三种：整年给一定人家做工的叫长年；按日给人做工的叫短工；自己也种地，只在过年过节以及收租时候来给一定的人家做工的称忙月）， 忙不过来，他便对父亲说，可以叫他的儿子闰土来管祭器的。
+		</p>
+		
+		<br /><br />
+		
+		<p class="p4">
+			These astonishing numbers have led 90% of Fortune 500 companies to rely on TeamViewer as their choice to bring colleagues together across all platforms and all devices. From the largest businesses who view TeamViewer as “a game changer” to individuals who post their love and appreciation for our products across various social channels almost as quickly as people download it, we are constantly inspired by our users’ imaginations for finding ways to uniquely take advantage of our technology.
+		</p>
+
+		<p class="p4">
+			这少年便是闰土。我认识他时，也不过十多岁，离现在将有三十年了； 那时我的父亲还在世，家景也好，我正是一个少爷。那一年，我家是一件大祭祀的值年。 这祭祀，说是三十多年才能轮到一回，所以很郑重。正月里供像，供品很多，祭器很讲究，拜的人也很多，祭器也很要防偷去。 我家只有一个忙月（我们这里给人做工的分三种：整年给一定人家做工的叫长年；按日给人做工的叫短工；自己也种地，只在过年过节以及收租时候来给一定的人家做工的称忙月）， 忙不过来，他便对父亲说，可以叫他的儿子闰土来管祭器的。
+		</p>
+		
+		<p class="p5">
+			这少年便是闰土。我认识他时，也不过十多岁，离现在将有三十年了； 那时我的父亲还在世，家景也好，我正是一个少爷。那一年，我家是一件大祭祀的值年。 这祭祀，说是三十多年才能轮到一回，所以很郑重。正月里供像，供品很多，祭器很讲究，拜的人也很多，祭器也很要防偷去。 我家只有一个忙月（我们这里给人做工的分三种：整年给一定人家做工的叫长年；按日给人做工的叫短工；自己也种地，只在过年过节以及收租时候来给一定的人家做工的称忙月）， 忙不过来，他便对父亲说，可以叫他的儿子闰土来管祭器的。
+		</p>
+
+	</body>
+
+</html>

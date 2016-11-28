@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>39长度单位</title>
+		
+		<style type="text/css">
+			
+			/**
+			 * 长度单位
+			 * 		像素px
+			 * 			- 像素使我们在网页中使用最多的一个单位，
+			 * 				
+			 * 		百分百%
+			 * 			- 也可以将单位设置为一个百分比的形式，
+			 * 				这样浏览器将会根据其父元素的样式来计算该值
+			 * 			- 使用百分比的好处时，当父元素的属性值发生变化时，
+			 * 				子元素也会按照比例发生改变
+			 * 			- 在我们创建一个自适应的页面时，经常使用百分比作为单位
+			 * 
+			 * 		em
+			 * 			- em和百分比类似，它是相对于当前元素的字体大小来计算的
+			 * 			- 1em = 1font-size
+			 * 			- 使用em时，当字体大小发生改变时，em也会随之改变
+			 * 			- 当设置字体相关的样式时，经常会使用em
+			 */
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+			
+			/*.box1{
+				width: 50%;
+				height: 50%;
+				background-color: yellow;
+			}*/
+			
+			.box1{
+				font-size: 100px;
+				width: 10em;
+				height: 50%;
+				background-color: yellow;
+			}
+			
+		</style>		
+		
+	</head>
+	
+	<body>
+		
+		<div class="box">
+			<div class="box1"></div>
+		</div>
+		
+	</body>
+</html>
