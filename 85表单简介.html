@@ -12,36 +12,125 @@
 		-->
 		
 		<!--
-			使用form标签创建一个表单
-				form标签中必须指定一个action属性，该属性指向的是一个服务器的地址
-				当我们提交表单时将会提交到action属性对应的地址
+			在表单中可以使用fieldset来为表单项进行分组
+			可以将表单项中的同一组放到一个fieldset中
 		-->
-		
-		<form action="85_target_表单简介.html">
+		<fieldset>			
+			
+			<!-- 在fieldset可以使用legend子标签，来指定组名 -->
+			<legend>用户信息</legend>
 			
 			<!--
-				使用form创建的仅仅是一个空白的表单，
-					我们还需要向form中添加不同的表单项
+				使用form标签创建一个表单
+					form标签中必须指定一个action属性，该属性指向的是一个服务器的地址
+					当我们提交表单时将会提交到action属性对应的地址
 			-->
 			
-			<!--
-				使用input来创建一个文本框，它的type属性是text
-					如果希望表单中的数据会提交到服务器中，还必须给表单指定一个name属性
-					name表示提交内容的名字
+			<form action="85_target_表单简介.html">
+				
+				<!--
+					使用form创建的仅仅是一个空白的表单，
+						我们还需要向form中添加不同的表单项
+				-->
+				
+				<!--
+					使用input来创建一个文本框，它的type属性是text
+						如果希望表单中的数据会提交到服务器中，还必须给表单指定一个name属性
+						name表示提交内容的名字
+						
+					用户填写的信息会附在url地址的后面以查询字符串的形式发送给服务器
+						url地址?查询字符串
+					格式：
+						属性名=属性值&属性名=属性值&属性名=属性值&属性名=属性值
+					在文本框中也可以指定value属性，该值将会作为文本框的默认值显示	
+				-->
+				<!--
+					在html中还为我们提供了一个标签，专门用来选中表单中的提示文字的
+					label标签
+					该标签可以指定一个for属性，该属性的值需要指定一个表单项的id值
+				-->
+				<label for="um">用户名</label>
+				<input id="um" name="username" value="我是默认值"/><br /><br />
+				
+				<!--
+					密码框
+						- 使用input创建一个密码框，它的type属性值是password
+				-->
+				<label for="psd">密码</label>
+				<input id="psd" name="password"/><br />
+				
+			</fieldset>
+			
+			<fieldset>
+				
+				<legend>用户爱好</legend>
+				
+				<!--
+					单选按钮
+						- 使用input来创建一个单选按钮，它的type属性使用radio
+						- 单选按钮通过name属性进行分组，name属性相同是一组按钮
+						- 像这种需要用户选择但是不需要用户之间填写内容的表单项，
+							还必须指定一个value属性，这样被选中的表单项的value属性值将会最终提交给服务器
+						
+						如果希望在单选按钮或者是多选框中指定默认选中的选项，
+							则可以在默认选中项中添加checked="checked"属性
+				-->
+				性别	<input type="radio" name="gender" value="men" id="men"/><label for=men>男</label>
+					<input type="radio" name="gender"value="women" checked="checked"id="women"/><label for="women">女</label>
 					
-				用户填写的信息会附在url地址的后面以查询字符串的形式发送给服务器
-					url地址?查询字符串
-				格式：
-					属性名=属性值&属性名=属性值&属性名=属性值&属性名=属性值
-				在文本框中也可以指定value属性，该值将会作为文本框的默认值显示	
-			-->
-			用户名<input type="text" name="username" value="我是默认值"/><br /><br />
+				<br /><br />
+				
+				<!--
+					多选框
+						- 使用input创建一个多选框，它的type="checkbox"
+				-->
+				爱好	<input type="checkbox" name="hobby" value="LQ" checked="checked"/>篮球
+					<input type="checkbox" name="hobby" value="YMQ" checked="checked"/>羽毛球
+					<input type="checkbox" name="hobby" value="PPQ" />乒乓球
+					<input type="checkbox" name="hobby" value="ZQ" />足球
+				
+				<br /><br />
+			
+			</fieldset>
 			
 			<!--
-				密码框
-					- 使用input创建一个密码框，它的type属性值是password
+				下拉列表
+					- 使用select来创建一个下拉列表
+					下拉列表的name属性需要指定为select，而value属性需要指定给option
+					可以通过在option中添加selected="selected"来将选项设置为默认选中
+					
+					当为select添加一个multiple="multiple"，则下拉列表变为一个多选的下拉列表
 			-->
-			密码<input type="password" name="password"/><br />
+			你喜欢的明星
+				<select name="star" >
+					
+					<!--
+						在select中可以使用optgroup对选项进行分组，
+							同一个optgroup中的选项是一组
+						可以通过label属性来指定分组的名字
+					-->
+					<optgroup label="女明星">
+						<!-- 在下拉列表中使用option标签来创建一个一个列表项 -->
+						<option value="FBB">范冰冰</option>
+						<option value="LXR">林心如</option>
+						<option value="ZW">赵薇</option>
+					</optgroup>
+					
+					<optgroup label="男明星">
+						<option value="ZBS" selected="selected">赵本山</option>
+						<option value="LDH">刘德华</option>
+						<option value="PCJ">潘长江</option>
+					</optgroup>
+
+				</select>
+				
+			<br /><br />
+			
+			<!--
+				使用textarea创建一个文本域
+			-->
+			自我介绍	<textarea name="info" ></textarea>
+			<br /><br />
 			
 			<!--
 				提交按钮可以将表单中的信息提交给服务器
@@ -49,6 +138,28 @@
 				在提交按钮中可以通过value属性来指定按钮上的文字
 			-->
 			<input type="submit" value="注册"/>
+			
+			<!--
+				<input type="reset" />可以创建一个重置按钮，
+					点击重置按钮以后表单中内容将会恢复为默认值
+			-->
+			<input type="reset" />
+			
+			<!--
+				<input type="button" />可以创建一个单纯的按钮
+					这个按钮没有任何功能，只能被点击
+			-->
+			<input type="button" value="按钮"/>
+			
+			<!--
+				除了使用input，也可以使用button标签来创建按钮
+				这种方式和使用input类似，只不过由于它是成对出现的标签
+					使用起来更加灵活
+			-->
+			<br /><br />
+			<button type="submit">提交</button>
+			<button type="reset">重置</button>
+			<button type="button">按钮</button>
 			
 		</form>
 		
