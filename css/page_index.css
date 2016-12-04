@@ -1,0 +1,28 @@
+/**
+ * 主页样式表
+ * 
+ * 设置body
+ */
+body{
+	/*设置body的背景图片，水平方向重复*/
+	background: url(../img/bd_bg.png) repeat-x;
+}
+
+/*固定元素的宽度和居中*/
+.w{
+	width: 940px;
+	margin: 0 auto;
+}
+
+/*设置header*/
+.header{
+	/*设置上内边距*/
+	padding-top: 37px;
+	/*设置下内边距*/
+	padding-bottom: 46px;
+}
+
+/*设置logo的位置*/
+.logo{
+	margin-left: 15px;
+}
